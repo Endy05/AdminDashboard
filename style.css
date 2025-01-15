@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    display: grid;
+    grid-template-areas: 
+    "sidebar header header"
+    "sidebar projects announcements"
+    "sidebar projects trending";
+    grid-template-columns: 0.95fr 2.55fr 1fr;
+    grid-template-rows: 0.9fr 2.1fr 2.1fr;
+}
+
+#sidebar {
+    background-color: rgb(64, 153, 255);
+    grid-area: sidebar;
+}
+
+#header {
+    background-color: #fff;
+    grid-area: header;
+}
+
+#projects {
+
+    grid-area: projects;
+}
+
+#announcements {
+
+    grid-area: announcements;
+}
+
+#trending {
+    grid-area: trending;
+}
+
+.dashboard {
+    padding: 20px;
+    height: 1050px;
+}
+
+.logo {
+    display: flex;
+    margin-bottom: 55px;
+}
+
+.logo > p {
+    padding: 5px;
+    padding-left: 10px;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+
+.logo > img {
+    width: 50px;
+    filter: invert(100%);
+}
+
+.white {
+    filter: invert(100%);
+    width: 25px;
+    margin-right: 25px;
+}
+
+.sidebar, .sidebar-two {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.sidebar > a {
+    position: relative;
+    top: -3px;
+}
+
+.sidebar > a > img {
+    position: relative;
+    top: 3px;
+}
+
+.sidebar > a, .sidebar-two > a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 24px;
+    padding-bottom: 22px;
+}
+
+header {
+    padding:  20px 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    z-index: 10;
+}
+
+.first {
+    display: flex;
+    justify-content: space-between;
+}
+
+.second {
+    display: flex;
+}
+
+.profile {
+    display: flex;
+}
+
+.search > img {
+    width: 25px;
+    position: relative;
+    top: 10px;
+    left: 3px;
+}
+
+.search-input {
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(223, 221, 221);
+    padding: 10px;
+    margin-left: 15px;
+    width: 620px;
+}
+
+.notification {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.notification-img {
+    width: 25px;
+    position: relative;
+    top: -5px;
+}
+
+.first__profile-image {
+    margin-left: 34px;
+    width: 48px;
+    border-radius: 50px;
+}
+
+.notification-username {
+    font-size: 19px;
+    margin-left: 30px;
+    position: relative;
+    top: -4px;
+}
+
+.second {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.second__profile-image {
+    width: 75px;
+    border-radius: 50px;
+    padding-left: 10px;
+}
+
+.text {
+    font-weight: 600;
+    padding: 10px 25px;
+}
+
+.hi {
+    font-size: 16px;
+}
+
+.second__username {
+    font-size: 25px;
+}
+
+.second__button {
+    color: white;
+    background-color: rgb(78, 171, 248);
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.second__buttons {
+    margin-top: 15px;
+}
+
+
+.projects__title {
+    font-size: 21px;
+    padding-left: 20px;
+}
+
+.cards {
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card {
+    margin: 15px;
+    background-color: white;
+    padding: 30px;
+    position: relative;
+    border-radius: 8px;
+
+}
+
+.card__name {
+    font-size: 19px;
+    padding-bottom: 5px;
+}
+
+main {
+    background-color: whitesmoke;
+    padding-top: 30px;
+}
+
+.card-border {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    background-color: #f5b000;
+    border-radius: 8px 0px 0px 8px; /* Жовтий бордюр */
+}
+
+.card__text {
+    font-size: 17px;
+    padding-bottom: 40px;
+    color: gray;
+}
+
+.adding {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 20px;
+    padding-right: 15px;
+}
+
+.adding__image {
+    padding: 10px;
+}
+
+.adding__image-star, .adding__image-eye, .adding__image-merge {
+    width: 30px;
+}
+
+.announcements, .trending {
+    background-color: whitesmoke;
+}
+
+.announcements__title {
+    font-size: 22px;
+    padding: 30px 0px 15px 10px;
+}
+
+.announcement {
+    border-radius: 10px;
+    padding: 30px;
+    padding-bottom: 0;
+    margin: 0 35px 0px 10px;
+    background-color: white;
+}
+
+.announcement__title {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.announcement__card > p {
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.announcement__card {
+    border-bottom: 1px solid rgb(163, 163, 163);
+    margin-bottom: 20px;
+}
+
+.trending__card {
+    background-color: white;
+}
+
+.trending__title {
+    font-size: 22px;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.trending__card {
+    border-radius: 10px;
+    padding: 30px;
+    margin: 5px 35px 0px 10px;
+}
+
+.trending__profile {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.trending__image {
+    width: 50px;
+    border-radius: 30px;
+}
+
+.trending__desc {
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
